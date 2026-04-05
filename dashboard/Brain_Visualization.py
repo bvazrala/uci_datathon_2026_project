@@ -4,10 +4,10 @@ from pathlib import Path
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parent
-FEATURES_PATH = ROOT / "npy_files" / "brain_features.npy"
-LABELS_PATH = ROOT / "npy_files" / "balanced_emojis.npy"
-OUTPUT_PATH = ROOT / "brain_surface.html"
+ROOT = Path(__file__).resolve().parent.parent   # repo root
+FEATURES_PATH = ROOT / "brain_features.npy"
+LABELS_PATH = ROOT / "balanced_emojis.npy"
+OUTPUT_PATH = Path(__file__).resolve().parent / "brain_surface.html"
 
 LEFT_VERTICES = 10242
 RIGHT_VERTICES = 10242
@@ -189,7 +189,7 @@ def build_html(mesh_payload: dict, data_payload: dict) -> str:
     }}
     body {{
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
       color: var(--ink);
       background:
         radial-gradient(circle at top left, #fff7ea 0, transparent 28%),
