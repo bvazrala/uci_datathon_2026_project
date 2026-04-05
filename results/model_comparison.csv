@@ -1,3 +1,4 @@
-model,accuracy,f1_macro,precision_macro,recall_macro
-TF-IDF + SVM,,,,
-TRIBE v2,,,,
+model,accuracy,f1_macro,f1_weighted
+Naive Bayes,0.3126133494541446,0.2538001878706666,0.30633812464462024
+Logistic Regression (balanced),0.2781551153941894,0.2469201800296184,0.2881188679702152
+Linear SVM (balanced),0.27438569040930266,0.23809361515898697,0.2828588397925061
